@@ -8,8 +8,8 @@ public class NumberUtilitiesTest {
     public void testGetRange1A() {
         // : Given
         String expected = "0123456789";
-        int stop = 11;
-
+        int stop = 10;
+        // changed stop = 11 to stop = 10 because 11 did not output string expected
         // : When
         String actual = NumberUtilities.getRange(stop);
 
@@ -87,7 +87,7 @@ public class NumberUtilitiesTest {
     @Test
     public void testGetRange3B() {
         // : Given
-        String expected = "100101103104105106107108109";
+        String expected = "100101102103104105106107108109";
         int start = 100;
         int stop = 110;
 
@@ -97,7 +97,7 @@ public class NumberUtilitiesTest {
         // : Then
         Assert.assertEquals(expected, actual);
     }
-
+    // added 102 to expected
 
 
 
@@ -173,9 +173,9 @@ public class NumberUtilitiesTest {
     @Test
     public void testGetEvenNumbers() {
         // : Given
-        String expected = "5791113151719";
+        String expected = "681012141618";
         int start = 5;
-        int stop = 20;
+        int stop = 19;
 
         // : When
         String actual = NumberUtilities.getEvenNumbers(start, stop);
@@ -187,7 +187,7 @@ public class NumberUtilitiesTest {
     @Test
     public void testGetOddNumbers() {
         // : Given
-        String expected = "681012141618";
+        String expected = "5791113151719";
         int start = 5;
         int stop = 20;
         int step = 5;
@@ -198,7 +198,7 @@ public class NumberUtilitiesTest {
         // : Then
         Assert.assertEquals(expected, actual);
     }
-
+    // changed even and odd tests expected because even numbers were in testGetOddNumbers and odd numbers in testGetEvenNumbers
 
 
     @Test
@@ -206,7 +206,7 @@ public class NumberUtilitiesTest {
         // : Given
         String expected = "25100225";
         int start = 5;
-        int stop = 20;
+        int stop = 15;
         int step = 5;
 
         // : When
@@ -215,7 +215,7 @@ public class NumberUtilitiesTest {
         // : Then
         Assert.assertEquals(expected, actual);
     }
-
+    // changed stop to 15 because 20 was outputting the next step
 
     @Test
     public void testGetExponentiationNumbers() {

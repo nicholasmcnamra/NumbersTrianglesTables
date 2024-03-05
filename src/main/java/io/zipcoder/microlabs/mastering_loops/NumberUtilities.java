@@ -34,18 +34,20 @@ public class NumberUtilities {
 
     public static String getRange(int stop) {
         String s = "";
-        for (int i = 0; i < stop; i++){
-            s += String.valueOf(i);
-        }
-        return s;
+//        for (int i = 0; i < stop; i++){
+//            s += String.valueOf(i);
+//        }
+//        return s;
+    return getRange(0, stop, 1);
     }
 
     public static String getRange(int start, int stop) {
-        String s = "";
-        for (int i = start; i < stop; i++) {
-            s += String.valueOf(i);
-        }
-        return s;
+//        String s = "";
+//        for (int i = start; i < stop; i++) {
+//            s += String.valueOf(i);
+//        }
+//        return s;
+        return getRange(start, stop, 1);
     }
 
 
@@ -60,8 +62,8 @@ public class NumberUtilities {
 
     public static String getExponentiations(int start, int stop, int step, int exponent) {
         String exponations = "";
-        for (int i = start; i < stop; i++) {
-            exponations += String.valueOf((i * i) * exponent);
+        for (int i = start; i < stop; i+= step) {
+            exponations += String.valueOf((int)Math.pow(i, exponent));
         }
         return exponations;
     }
