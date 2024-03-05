@@ -2,8 +2,10 @@ package io.zipcoder.microlabs.mastering_loops;
 
 public class TableUtilities {
     public static String getSmallMultiplicationTable() {
-        String smallTable = "";
-
+//        String smallTable = "";
+//        for (int i = 1; i < 3; i++) {
+//            for (int j = 2;)
+//        }
         return null;
     }
 

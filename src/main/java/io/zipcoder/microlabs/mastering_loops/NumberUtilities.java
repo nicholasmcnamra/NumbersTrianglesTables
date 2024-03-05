@@ -5,7 +5,8 @@ public class NumberUtilities {
     public static String getEvenNumbers(int start, int stop) {
         StringBuilder evenNumbers = new StringBuilder();
         for (int i = start; i <= stop; i++) {
-            if (i % 2 == 0) {
+            boolean b = !(isOdd(i));
+            if (b) {
                 evenNumbers.append(i);
             }
         }
@@ -16,11 +17,15 @@ public class NumberUtilities {
     public static String getOddNumbers(int start, int stop) {
         String oddNumbers = "";
         for (int i = start; i <= stop; i++) {
-            if (i % 2 != 0) {
+            if (isOdd(i)) {
                 oddNumbers += String.valueOf(i);
             }
         }
         return oddNumbers;
+    }
+
+    private static boolean isOdd(int n) {
+       return !((n % 2) == 0);
     }
 
 
