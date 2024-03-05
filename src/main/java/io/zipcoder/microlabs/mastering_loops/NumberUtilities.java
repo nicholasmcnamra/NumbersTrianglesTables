@@ -1,36 +1,77 @@
 package io.zipcoder.microlabs.mastering_loops;
-
+import java.util.*;
 
 public class NumberUtilities {
     public static String getEvenNumbers(int start, int stop) {
-        return null;
+        StringBuilder evenNumbers = new StringBuilder();
+        for (int i = start; i <= stop; i++) {
+            if (i % 2 == 0) {
+                evenNumbers.append(i);
+            }
+        }
+        return evenNumbers.toString();
     }
 
 
     public static String getOddNumbers(int start, int stop) {
-        return null;
+        String oddNumbers = "";
+        for (int i = start; i <= stop; i++) {
+            if (i % 2 != 0) {
+                oddNumbers += String.valueOf(i);
+            }
+        }
+        return oddNumbers;
     }
 
 
     public static String getSquareNumbers(int start, int stop, int step) {
-        return null;
+        String squares = "";
+        for (int i = start; i <= stop; i += step) {
+            squares += String.valueOf(i * i);
+        }
+        return squares;
     }
 
-    public static String getRange(int start) {
-        return null;
+    public static String getRange(int stop) {
+        String s = "";
+        for (int i = 0; i < stop; i++){
+            s += String.valueOf(i);
+        }
+        return s;
     }
 
     public static String getRange(int start, int stop) {
-        return null;
+        String s = "";
+        for (int i = start; i < stop; i++) {
+            s += String.valueOf(i);
+        }
+        return s;
     }
 
 
     public static String getRange(int start, int stop, int step) {
-        return null;
+        String iterationsByStep = "";
+        for (int i = start; i < stop; i += step) {
+            iterationsByStep += String.valueOf(i);
+        }
+        return iterationsByStep;
     }
 
 
     public static String getExponentiations(int start, int stop, int step, int exponent) {
-        return null;
+        String exponations = "";
+        for (int i = start; i < stop; i++) {
+            exponations += String.valueOf((i * i) * exponent);
+        }
+        return exponations;
     }
 }
+
+
+// public int getAge(int num) {
+//   int age = 0;
+//   System.out.println("Enter your age: ");
+//   age = scanner.nextLine;
+
+//   return age;
+//     }
